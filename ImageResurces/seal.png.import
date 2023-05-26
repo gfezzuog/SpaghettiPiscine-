@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cs2u6dx6cit5y"
-path="res://.godot/imported/MoveUp.png-818b54259eae979de97dc503674d838e.ctex"
+uid="uid://dw8xwod00pngi"
+path="res://.godot/imported/seal.png-b8f3a2e2e812c1560d996e4fd5b69fae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ImageResurces/MoveUp.png"
-dest_files=["res://.godot/imported/MoveUp.png-818b54259eae979de97dc503674d838e.ctex"]
+source_file="res://ImageResurces/seal.png"
+dest_files=["res://.godot/imported/seal.png-b8f3a2e2e812c1560d996e4fd5b69fae.ctex"]
 
 [params]
 
