@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=3 uid="uid://x8vlnslmrlmb"]
+
+[ext_resource type="Texture2D" uid="uid://bsxyqmg6e44y2" path="res://ImageResurces/MoveDown.png" id="1_6bg7d"]
+[ext_resource type="Texture2D" uid="uid://clcetvkx5l2bx" path="res://ImageResurces/MoveLeft.png" id="2_kq3rf"]
+[ext_resource type="Texture2D" uid="uid://q47pkxb36q84" path="res://ImageResurces/MoveRight.png" id="3_4hgbr"]
+[ext_resource type="Texture2D" uid="uid://cs2u6dx6cit5y" path="res://ImageResurces/MoveUp.png" id="4_qpa6l"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dj443"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_6bg7d")
+}],
+"loop": true,
+"name": &"Down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_kq3rf")
+}],
+"loop": true,
+"name": &"Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_4hgbr")
+}],
+"loop": true,
+"name": &"Right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_qpa6l")
+}],
+"loop": true,
+"name": &"Up",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_eshqa"]
+
+[node name="Area2D" type="Area2D"]
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_dj443")
+animation = &"Down"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(2, 2)
+shape = SubResource("CircleShape2D_eshqa")
