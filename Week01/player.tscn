@@ -123,6 +123,6 @@ sprite_frames = SubResource("SpriteFrames_dj443")
 animation = &"Right"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(24, 40)
+position = Vector2(35, 44)
 scale = Vector2(2, 2)
 shape = SubResource("CircleShape2D_eshqa")

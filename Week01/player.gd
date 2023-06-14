@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 var dir:Vector2 = Vector2.ZERO;
+var speed_debuff = 1
 @export var speed = 400 # How fast the player will move (pixels/sec).
 var screen_size # Size of the game window.
 @onready var image = $AnimatedSprite2D;
@@ -9,11 +10,12 @@ func _physics_process(_delta):
 
 	dir.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left");
 	dir.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up");
-	velocity.x = lerp(velocity.x, dir.x * speed, _delta);
-	velocity.y = lerp(velocity.y, dir.y * speed, _delta);
+	velocity.x = clamp(lerp(velocity.x, dir.x * speed, _delta), (speed * -1), speed) * speed_debuff;
+	velocity.y = clamp(lerp(velocity.y, dir.y * speed, _delta), (speed * -1), speed) * speed_debuff;
 	if(image.is_playing() and abs(velocity.x) < 0.2 and abs(velocity.y) < 0.2) :
 		image.stop();
 	move_and_slide();
+
 
 func _input(event):
 	if(event is InputEventKey and event.is_pressed()):

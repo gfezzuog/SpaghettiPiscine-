@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://cpm7yqqumit46"]
+[gd_scene load_steps=4 format=3 uid="uid://cpm7yqqumit46"]
 
 [ext_resource type="Texture2D" uid="uid://c08m2esbmcr46" path="res://ImageResurces/Icicle.png" id="1_7x8dq"]
+[ext_resource type="Script" path="res://Icicle.gd" id="1_jc803"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q7tcr"]
 size = Vector2(34, 57)
 
 [node name="Spike area" type="Area2D"]
+script = ExtResource("1_jc803")
 
 [node name="Icicle hitbox" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_q7tcr")
@@ -13,3 +15,5 @@ shape = SubResource("RectangleShape2D_q7tcr")
 [node name="Icicle" type="Sprite2D" parent="."]
 rotation = 3.14159
 texture = ExtResource("1_7x8dq")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
