@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://7dsn16jk7o6g"]
+
+[ext_resource type="Texture2D" uid="uid://b4tksg3ka8q3c" path="res://ImageResurces/BHO.jpg" id="1_6caqh"]
+[ext_resource type="AudioStream" uid="uid://dr5dsxuno2ohe" path="res://ImageResurces/Nothing to worry about.mp3" id="2_4wpfb"]
+
+[node name="Death" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_right = 600.0
+offset_bottom = 338.0
+scale = Vector2(1.91812, 1.91498)
+texture = ExtResource("1_6caqh")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer"]
+stream = ExtResource("2_4wpfb")
+volume_db = 24.0
+autoplay = true
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="CanvasLayer"]
+stream = ExtResource("2_4wpfb")
+volume_db = 24.0
+autoplay = true
